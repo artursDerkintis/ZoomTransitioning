@@ -78,8 +78,8 @@ extension ZoomTransitioning {
             },
             completion: { _ in
                 sourceView.alpha = 1.0
-                transitioningImageView.alpha = 0.0
-                transitioningImageView.removeFromSuperview()
+                //transitioningImageView.alpha = 0.0
+                //transitioningImageView.removeFromSuperview()
 
                 self.source.transitionSourceDidEnd?()
                 self.destination.transitionDestinationDidEnd?(transitioningImageView: transitioningImageView)
