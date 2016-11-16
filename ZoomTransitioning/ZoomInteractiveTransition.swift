@@ -51,6 +51,9 @@ extension ZoomInteractiveTransition: UIGestureRecognizerDelegate {
 
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         interactive = true
+        if gestureRecognizer.location(in: gestureRecognizer.view).x > 20{
+            return false
+        }
         if #available(iOS 10.0, *) {
             viewController = navigationController?.popViewController(animated: true)
         }
