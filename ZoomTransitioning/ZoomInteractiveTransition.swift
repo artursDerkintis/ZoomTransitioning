@@ -51,7 +51,7 @@ extension ZoomInteractiveTransition: UIGestureRecognizerDelegate {
 
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         interactive = true
-        if gestureRecognizer.location(in: gestureRecognizer.view).x > 20{
+        if gestureRecognizer.location(in: gestureRecognizer.view).x > 40{
             return false
         }
         if #available(iOS 10.0, *) {
